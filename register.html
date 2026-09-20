@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - HTML5进阶综合训练</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面头部：语义化标签 header + h1 -->
+    <header>
+        <h1>用户注册</h1>
+        <nav>
+            <!-- 无序列表 ul：站点导航 -->
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登录</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <!-- 表单主体区域：语义化标签 main -->
+    <main>
+        <section class="process">
+            <!-- 无序列表 ul：注册流程 -->
+            <h2>注册流程</h2>
+            <ul>
+                <li>填写注册信息</li>
+                <li>上传个人头像</li>
+                <li>核对信息并提交</li>
+                <li>完成注册</li>
+            </ul>
+        </section>
+ 
+        <section class="steps">
+            <!-- 有序列表 ol：注册步骤 -->
+            <h2>注册步骤</h2>
+            <ol>
+                <li>准备常用的邮箱与手机号</li>
+                <li>按提示完整填写下方注册表单</li>
+                <li>点击“注册”按钮提交资料</li>
+                <li>根据页面提示完成验证</li>
+            </ol>
+        </section>
+ 
+        <!-- 注册表单（核心部分） -->
+        <form action="register.php" method="post" id="registerForm">
+            <fieldset>
+                <legend>基本信息</legend>
+                <p>
+                    <label for="username">用户名：</label>
+                    <input type="text" name="username" id="username" required placeholder="请输入用户名">
+                </p>
+                <p>
+                    <label for="password">密码：</label>
+                    <input type="password" name="password" id="password" placeholder="6-16位字符">
+                </p>
+                <p>
+                    <label for="confirmPassword">确认密码：</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="请再次输入密码">
+                </p>
+                <p class="radio-group">
+                    性别：
+                    <!-- 方式一：label for + id 关联 -->
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label for="male">男</label>
+                    <!-- 方式二：label 包裹式关联 -->
+                    <label><input type="radio" name="gender" value="female">女</label>
+                </p>
+                <p>
+                    <label for="birthday">出生日期：</label>
+                    <input type="date" name="birthday" id="birthday">
+                </p>
+                <p>
+                    <label for="email">邮箱：</label>
+                    <input type="email" name="email" id="email" required placeholder="example@mail.com">
+                </p>
+                <p>
+                    <label for="phone">手机号：</label>
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{11}" placeholder="请输入11位手机号">
+                </p>
+            </fieldset>
+ 
+            <fieldset>
+                <legend>兴趣爱好</legend>
+                <p class="radio-group">
+                    <label><input type="checkbox" name="hobby" value="reading">阅读</label>
+                    <label><input type="checkbox" name="hobby" value="music">音乐</label>
+                    <label><input type="checkbox" name="hobby" value="sports">运动</label>
+                    <label><input type="checkbox" name="hobby" value="travel">旅行</label>
+                </p>
+            </fieldset>
+ 
+            <fieldset>
+                <legend>其他信息</legend>
+                <p>
+                    <label for="avatar">头像上传：</label>
+                    <input type="file" name="avatar" id="avatar" accept="image/*" multiple>
+                </p>
+                <p>
+                    <label for="city">所在城市：</label>
+                    <select name="city" id="city">
+                        <option value="">请选择城市</option>
+                        <option value="changsha" selected>长沙</option>
+                        <option value="changde">常德</option>
+                        <option value="zhuzhou">株洲</option>
+                        <option value="xiangtan">湘潭</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="bio">个人简介：</label>
+                </p>
+                <p>
+                    <textarea name="bio" id="bio" rows="4" cols="50" placeholder="简单介绍一下自己（选填）"></textarea>
+                </p>
+            </fieldset>
+ 
+            <p class="btn-group">
+                <button type="submit">注册</button>
+                <button type="reset">重置</button>
+            </p>
+        </form>
+ 
+        <!-- 表格：会员权益对比（thead/tbody + colspan/rowspan） -->
+        <section class="benefits">
+            <h2>会员权益对比</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>权益项目</th>
+                        <th>普通会员</th>
+                        <th>高级会员</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="2">专属功能</th>
+                        <td>基础资料展示</td>
+                        <td>资料展示 + 数据分析</td>
+                    </tr>
+                    <tr>
+                        <td>每周精选推荐</td>
+                        <td>每日个性化推荐</td>
+                    </tr>
+                    <tr>
+                        <th>客服支持</th>
+                        <td colspan="2">7×24小时在线客服</td>
+                    </tr>
+                    <tr>
+                        <th>年费</th>
+                        <td>免费</td>
+                        <td>¥99/年</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+ 
+        <section class="faq">
+            <!-- 定义列表 dl：常见问题 -->
+            <h2>常见问题</h2>
+            <dl>
+                <dt>为什么要注册账号？</dt>
+                <dd>注册后可保存个人资料、参与互动并享受会员专属权益。</dd>
+                <dt>密码忘记怎么办？</dt>
+                <dd>在登录页点击“忘记密码”，通过注册邮箱或手机号即可重置。</dd>
+                <dt>注册信息是否安全？</dt>
+                <dd>我们会加密存储您的个人资料，绝不向第三方泄露。</dd>
+            </dl>
+        </section>
+    </main>
+ 
+    <!-- 页面底部：语义化标签 footer -->
+    <footer>
+        <p>版权所有 &copy; 2026 湖南文理学院芙蓉学院 Web应用开发技术实验</p>
+    </footer>
+ 
+    <script src="register.js"></script>
+</body>
+</html>
