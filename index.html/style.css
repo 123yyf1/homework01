@@ -1,0 +1,192 @@
+style.css（页面样式）
+/* ========== 全局样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f8;
+}
+ 
+/* ========== 页面头部 ========== */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+ 
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+ 
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 24px;
+}
+ 
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+ 
+header nav ul li a:hover {
+    color: #3498db;
+}
+ 
+/* ========== 主体布局 ========== */
+main {
+    max-width: 860px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+ 
+main section {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+ 
+main section h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+ 
+/* ========== 表单 ========== */
+form fieldset {
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background-color: #fff;
+}
+ 
+form legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 8px;
+}
+ 
+form p {
+    margin-bottom: 12px;
+}
+ 
+form label {
+    display: inline-block;
+    min-width: 90px;
+}
+ 
+form .radio-group label {
+    min-width: 0;
+    margin-right: 16px;
+}
+ 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 60%;
+    padding: 8px 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+}
+ 
+.btn-group {
+    text-align: center;
+}
+ 
+.btn-group button {
+    padding: 10px 36px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 12px;
+}
+ 
+.btn-group button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+}
+ 
+.btn-group button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+ 
+.btn-group button[type="reset"] {
+    background-color: #95a5a6;
+    color: #fff;
+}
+ 
+.btn-group button[type="reset"]:hover {
+    background-color: #7f8c8d;
+}
+ 
+/* ========== 表格 ========== */
+.benefits table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+ 
+.benefits th,
+.benefits td {
+    border: 1px solid #dcdde1;
+    padding: 10px 14px;
+    text-align: center;
+}
+ 
+.benefits thead th {
+    background-color: #3498db;
+    color: #fff;
+}
+ 
+.benefits tbody th {
+    background-color: #ecf0f1;
+}
+ 
+/* ========== 定义列表 ========== */
+.faq dt {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+ 
+.faq dd {
+    margin-left: 20px;
+    color: #555;
+}
+ 
+/* ========== 页面底部 ========== */
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 13px;
+}
