@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一级水平导航菜单</title>
+    <style>
+        /* 全局重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f0f2f5;
+            padding-top: 40px;
+        }
+
+        /* 去掉 table 默认边框间距 */
+        table {
+            border-collapse: collapse;
+        }
+
+        /* 一级菜单项：把 <td> 里的 <a> 做成按钮 */
+        table td a {
+            display: block;
+            padding: 12px 24px;
+            background-color: #1e6bb8;
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            border-right: 1px solid #fff;
+            transition: background-color 0.2s;
+        }
+
+        /* 鼠标悬停：背景变深 */
+        table td a:hover {
+            background-color: #154a82;
+        }
+    </style>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td><a href="#">首页</a></td>
+            <td><a href="#">教学院(部)</a></td>
+            <td><a href="#">党群机构</a></td>
+            <td><a href="#">行政教辅机构</a></td>
+            <td><a href="#">教学科研</a></td>
+            <td><a href="#">招生就业</a></td>
+            <td><a href="#">国际交流</a></td>
+            <td><a href="#">数字图书馆</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二级水平导航菜单</title>
+    <style>
+        /* 全局重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 顶部 logo 行 */
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1e6bb8;
+            padding: 20px 30px;
+        }
+
+        /* 主导航：flex 水平排列 */
+        nav, body > ul:last-of-type {
+            display: flex;
+            background-color: #1e6bb8;
+        }
+
+        body > ul:last-of-type > li {
+            position: relative;   /* 关键：二级菜单的定位父级 */
+        }
+
+        body > ul:last-of-type > li > a {
+            display: block;
+            padding: 12px 24px;
+            color: #fff;
+            font-size: 15px;
+            transition: background-color 0.2s;
+        }
+
+        body > ul:last-of-type > li > a:hover {
+            background-color: #154a82;
+        }
+
+        /* 二级菜单：默认隐藏，绝对定位在父项下方 */
+        body > ul:last-of-type ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            display: none;       /* 默认不显示 */
+            z-index: 10;
+        }
+
+        body > ul:last-of-type ul a {
+            display: block;
+            padding: 10px 16px;
+            color: #333;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+
+        body > ul:last-of-type ul a:hover {
+            background-color: #e8f1fa;
+            color: #1e6bb8;
+        }
+
+        /* 鼠标悬停在一级 li 上时显示二级菜单 */
+        body > ul:last-of-type li:hover > ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="logo">欢迎访问湖南文理学院</li>
+    </ul>
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">教学院(部)</a>
+            <ul>
+                <li><a href="#">计算机与电气工程学院</a></li>
+                <li><a href="#">芙蓉学院</a></li>
+            </ul>
+        </li>
+        <li><a href="#">党群机构</a></li>
+        <li><a href="#">行政教辅机构</a></li>
+        <li><a href="#">教学科研</a></li>
+        <li><a href="#">招生就业</a></li>
+        <li><a href="#">国际交流</a></li>
+        <li><a href="#">数字图书馆</a></li>
+    </ul>
+</body>
+</html>
